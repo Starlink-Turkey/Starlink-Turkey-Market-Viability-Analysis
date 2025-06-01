@@ -1,45 +1,54 @@
-A public repository for all materials related to evaluating Starlink’s launch in Turkey.
+# Starlink Turkey Market Viability Analysis
 
-Project Overview
-This repository consolidates all code, data, documents, and analysis conducted to assess the feasibility of deploying Starlink in Turkey. It covers:
+Public repository for all materials related to evaluating Starlink’s launch in Turkey.
 
-Technical Analysis – coverage modeling, link-budget calculations, and optimization scripts.
+## Project Overview
 
-Market Analysis – customer segmentation, surveys, adoption forecasts, and benchmarking.
+This repository collects all code, data, documents, and analysis used to assess the feasibility of deploying Starlink in Turkey. It covers:
 
-Legal Analysis – licensing requirements, data-protection rules, foreign-ownership regulations, and competition law.
+- **Technical Analysis** – coverage modeling, link-budget calculations, optimization scripts  
+- **Market Analysis** – customer segmentation, surveys, adoption forecasts, benchmarking  
+- **Legal Analysis** – licensing requirements, data-protection rules, foreign-ownership regulations, competition law  
+- **Business Analysis** – cost models, pricing proposals, channel strategies  
 
-Business Analysis – cost models, pricing proposals, and channel strategies.
+---
 
-Technical Analysis
-Coverage-optimization and link-budget modeling
+## Technical Analysis
 
-Emergency-scenario simulations (e.g., GSM outages)
+- Coverage-optimization and link-budget modeling  
+- Emergency-scenario simulations (e.g., GSM outages)  
+- Scripts and tools for geospatial data, path-loss calculations, integer-programming solutions  
 
-Scripts and tools for geospatial data, path-loss calculations, and integer-programming solutions
+## Market Analysis
 
-Market Analysis
-Customer segment definitions and sizing methods
+- Customer segment definitions and sizing methods  
+- Survey instruments and aggregated results  
+- Adoption-forecast models using peer-benchmarking techniques  
+- Visualizations and summary reports for decision makers  
 
-Survey instruments and aggregated results
+## Legal Analysis
 
-Adoption-forecast models using peer-benchmarking techniques
+- Overview of Turkish licensing requirements and spectrum regulations  
+- KVKK compliance and data-localization rules  
+- Foreign-ownership and entity setup under Turkish commercial law  
+- Competition-law safeguards against incumbent anti-competitive behavior  
 
-Visualizations and summary reports for decision makers
+## Business Analysis
 
-Legal Analysis
-Overview of Turkish licensing requirements and spectrum regulations
+- Cost models and pricing proposals  
+- Channel strategy recommendations  
+- Revenue forecasts and break-even analysis  
+- Sensitivity analysis for key assumptions  
 
-Data-protection (KVKK) compliance and data-localization rules
+---
 
-Foreign-ownership and entity setup under Turkish commercial law
+## Contributors
 
-Competition-law safeguards against incumbent anti-competitive behavior.
+- **Doruk Yalcin** (Project Lead)  
+- **Selin Bozdemir**, **Sıla Gümüş**, **Ceren Evcil**, **Dila Yaldız** (Software Engineers)  
+- **Baha Kardan**, **Dilay Sıla Çelik**, **Hilayda Işık**, **Yağmur Mirza** (Business and Market Evaluation Analysts)  
+- **Defne Burçak** (Legal Analyst)  
 
-Contributers:
-Doruk Yalcin(Project Lead)
-Selin Bozdemir, Sİla Gumus, Ceren Evcil, Dila Yaldiz (Software Engineers)
-Baha Kardan, Dilay Sila Celik, Hilayda İsik, Yagmur Mirza (Business and Market Evaluation Analyists)
-Defne Burcak (Legal Analyst)
+---
 
 Feel free to open issues or submit pull requests. Thank you for your interest!
