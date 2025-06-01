@@ -45,9 +45,9 @@ This repository collects all code, data, documents, and analysis used to assess 
 ## Contributors
 
 - **Doruk Yalcin** (Project Lead)  
-- **Selin Bozdemir**, **Sıla Gümüş**, **Ceren Evcil**, **Dila Yaldız** (Software Engineers)  
-- **Baha Kardan**, **Dilay Sıla Çelik**, **Hilayda Işık**, **Yağmur Mirza** (Business and Market Evaluation Analysts)  
-- **Defne Burçak** (Legal Analyst)  
+- **Selin Bozdemir**, **Sila Gumus**, **Ceren Evcil**, **Dila Yaldiz** (Software Engineers)  
+- **Baha Kardan**, **Dilay Sila Celik**, **Hilayda Isik**, **Yagmur Mirza** (Business and Market Evaluation Analysts)  
+- **Defne Burcak** (Legal Analyst)  
 
 ---
 
