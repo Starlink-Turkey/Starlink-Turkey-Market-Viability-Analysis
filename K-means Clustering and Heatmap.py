@@ -3,10 +3,6 @@
 
 # In[ ]:
 
-
-pip install geopy pandas openpyxl
-
-
 # # Starlink Research
 # ## K-means Clustering and Heatmap Generation for Istanbul
 
@@ -22,7 +18,7 @@ from sklearn.cluster import KMeans
 import seaborn as sns
 
 # 2. Load Excel data (skip header row)
-df = pd.read_excel("istanbul_population.xlsx", skiprows=1)
+df = pd.read_excel("data/istanbul_population.xlsx", skiprows=1)
 
 # 3. Select features for clustering: Population Density, Latitude, Longitude
 X = df.iloc[:, [4, 5, 6]]  # 4: pop density, 5: lat, 6: long
@@ -70,7 +66,7 @@ from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 
 # Load the Excel file (no headers)
-df = pd.read_excel("istanbul_population.xlsx", header=None, skiprows=1)
+df = pd.read_excel("data/istanbul_population.xlsx", header=None, skiprows=1)
 
 # Set correct column names
 df.columns = [
@@ -97,8 +93,6 @@ for _, row in df.iterrows():
         fill_opacity=0.8
     ).add_to(m)
 
-m
-
 
 # ### Geocoding: Istanbul Neighborhoods Coordinates
 
@@ -110,7 +104,7 @@ from geopy.geocoders import Nominatim
 import time
 
 # Load your Excel file
-df = pd.read_excel("istanbul_population.xlsx", sheet_name="Neighborhoods")  # adjust sheet name if needed
+df = pd.read_excel("data/istanbul_population.xlsx", sheet_name="Neighborhoods")  # adjust sheet name if needed
 
 # Set up geopy
 geolocator = Nominatim(user_agent="istanbul_geocoder")
@@ -131,7 +125,7 @@ def get_coordinates(row):
 df[['Latitude', 'Longitude']] = df.apply(get_coordinates, axis=1)
 
 # Save the results
-df.to_excel("istanbul_neighborhoods_with_coords.xlsx", index=False)
+df.to_excel("data/istanbul_neighborhoods_with_coords.xlsx", index=False)
 print("✅ Geocoding complete. File saved as istanbul_neighborhoods_with_coords.xlsx")
 
 
@@ -155,7 +149,7 @@ from sklearn.preprocessing import StandardScaler
 import folium
 
 # Load data
-df = pd.read_excel("istanbul_neighborhoods_with_coords.xlsx")
+df = pd.read_excel("data/istanbul_neighborhoods_with_coords.xlsx")
 
 # Drop missing coordinates
 df = df.dropna(subset=['Latitude', 'Longitude'])
@@ -183,7 +177,7 @@ for _, row in df.iterrows():
         fill_opacity=0.7
     ).add_to(m)
 
-m.save("istanbul_neighborhood_clusters.html")
+m.save("data/istanbul_neighborhood_clusters.html")
 print("✅ Map saved as istanbul_neighborhood_clusters.html")
 
 
@@ -206,7 +200,7 @@ import pandas as pd
 import folium
 
 # Load the Excel file (replace with your actual file name)
-file_path = "istanbul_neighborhoods_with_coords.xlsx"
+file_path = "data/istanbul_neighborhoods_with_coords.xlsx"
 df = pd.read_excel(file_path)
 
 # Assign purchasing power (proxy by district)
@@ -268,7 +262,7 @@ for _, row in df_cleaned.iterrows():
     ).add_to(m)
 
 # Save map
-m.save("istanbul_service_zones_map.html")
+m.save("data/istanbul_service_zones_map.html")
 print("✅ Map saved as istanbul_service_zones_map.html")
 
 
@@ -290,8 +284,8 @@ from pulp import LpProblem, LpMinimize, LpVariable, lpSum, LpBinary, PULP_CBC_CM
 from geopy.distance import geodesic
 
 # Load data
-df = pd.read_excel("istanbul_neighborhoods_with_coords.xlsx")
-service_points = pd.read_excel("istanbul_service_points.xlsx")
+df = pd.read_excel("data/istanbul_neighborhoods_with_coords.xlsx")
+service_points = pd.read_excel("data/istanbul_service_points.xlsx")
 
 # Drop missing coordinates
 df = df.dropna(subset=['Latitude', 'Longitude'])
