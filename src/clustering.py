@@ -65,7 +65,7 @@ def cluster_districts_and_map(excel_path: str, skiprows: int = 1, n_clusters: in
             fill_opacity=0.8
         ).add_to(m)
 
-    m.save("data/istanbul_district_clusters.html")
+    m.save("../data/istanbul_district_clusters.html")
     print("✅ District clusters map saved as istanbul_district_clusters.html")
 
 
